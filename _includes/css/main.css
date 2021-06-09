@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header and navigation */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  background-color: #fafafa;
+  border-bottom: thick ridge #a3b3c3;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+header .title a {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+  font-weight: bold;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  margin-right: 4em;
+  color: black;
+  text-decoration: none;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 4em;
+}
+
+header nav ul li {
+  display: block;
+  font-size: large;
+  margin-left: 2em;
+}
+
+header nav ul li a {
+  color: black;
+  margin-left: 2em;
+}
+
+header nav ul li a:hover {
+  text-decoration-color: red;
+}
+
+@media (max-width: 480px) {
+  header .title a {
+    margin-right: 0;
+  }
+  header nav {
+    display: none;
+  }
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 1234px;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-top: 2em;
+}
+
+main a {
+  color: black;
+}
+
+main a:hover {
+  text-decoration-color: red;
+}
+
+main h1 {
+  font-size: 2em;
+}
+
+main article.post {
+  font-size: 1.25em;
+}
+
+main article.post h2 {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+main article.post h2:before {
+  border-bottom: 1px dashed black;
+  content: " ";
+  margin-right: 1em;
+  width: 1vw;
+}
+
+main article.post h2:after {
+  flex-grow: 1;
+  border-bottom: 1px dashed black;
+  content: " ";
+  margin-left: 1em;
+}
+
+main article.post ul {
+  margin-top: 2em;
+}
+
+main article.post ul li {
+  margin-top: 1em;
+  padding-right: 4em;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  background-color: #fafafa;
+  border-top: thick ridge #a3b3c3;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+
+footer a {
+  color: black;
+  margin-left: 2em;
+}
+
+footer a:hover {
+  text-decoration-color: red;
+}

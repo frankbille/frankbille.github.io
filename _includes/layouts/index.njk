@@ -1,0 +1,25 @@
+---
+layout: main
+pagination:
+  data: collections.post
+  size: 10
+  reverse: true
+  alias: posts
+--- 
+
+{{ content | safe }}
+
+<h1>Recent blog posts</h1>
+{% for post in posts %}
+  <article class="excerpt">
+    <h2>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h2>
+    <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+    <section>
+        {{ post.data.excerpt }}
+    </section>
+    <a href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
+  </article>
+{% endfor %}
+

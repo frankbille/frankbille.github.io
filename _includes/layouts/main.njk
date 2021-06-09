@@ -1,0 +1,38 @@
+---
+title: Frank Bille-Stauner's Blog
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {%- set css -%}
+    {% include "css/main.css" %}
+  {%- endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+  </head>
+  <body>
+    <header>
+      <div class="title"><a href="/">Frank Bille-Stauner</a></div>
+      <nav>
+        <ul>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <div>&copy; 2000-{{ page.date.getFullYear() }}</div>
+      <a href="https://github.com/frankbille/frankbille.github.io/blob/main/{{ page.inputPath }}">Edit this page on GitHub</a>
+    </footer>
+  </body>
+</html>
