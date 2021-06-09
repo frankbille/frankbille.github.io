@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New website made with Eleventy</title>
+  <style>
+    body{margin:0;font-family:monospace;min-height:100vh;display:flex;flex-direction:column}header{display:flex;justify-content:center;align-items:center;height:4em;background-color:#fafafa;border-bottom:thick ridge #a3b3c3;border-bottom-left-radius:.3em;border-bottom-right-radius:.3em}header .title a{margin:0 4em 0 0;padding:0;font-size:large;font-weight:700;height:4em;display:flex;align-items:center;color:#000;text-decoration:none}header nav ul{display:flex;justify-content:center;align-items:center;padding:0;margin:0;height:4em}header nav ul li{display:block;font-size:large;margin-left:2em}header nav ul li a{color:#000;margin-left:2em}header nav ul li a:hover,main a:hover{text-decoration-color:red}@media (max-width:480px){header .title a{margin-right:0}header nav{display:none}}main{display:flex;flex-direction:column;align-self:center;max-width:1234px;padding-left:4em;padding-right:4em;padding-top:2em}main a{color:#000}main h1{font-size:2em}main article.post{font-size:1.25em}main article.post h2{font-size:1em;display:flex;align-items:center}main article.post h2:before{border-bottom:1px dashed #000;content:" ";margin-right:1em;width:1vw}main article.post h2:after{flex-grow:1;border-bottom:1px dashed #000;content:" ";margin-left:1em}main article.post ul{margin-top:2em}main article.post ul li{margin-top:1em;padding-right:4em}footer{margin-top:auto;display:flex;justify-content:center;align-items:center;height:3em;background-color:#fafafa;border-top:thick ridge #a3b3c3;border-top-left-radius:.3em;border-top-right-radius:.3em}footer a{color:#000;margin-left:2em}footer a:hover{text-decoration-color:red}
+  </style>
+  </head>
+  <body>
+    <header>
+      <div class="title"><a href="/">Frank Bille-Stauner</a></div>
+      <nav>
+        <ul>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      
+<article class="post"> 
+    <h1>New website made with Eleventy</h1>
+    <time datetime="2021-06-09">June 9, 2021</time>
+
+    <p>It has been a long time since I have done anything with my website, and I figured it was about time.
+Having worked with a lot of heavyweight frontend frameworks, I wanted to go back to the roots again.<br>
+For me, this means back to writing simple pages with little to no JavaScript. I have also find the
+new wave of <a href="https://brutalistwebsites.com/">brutalist websites</a> quite refreshing, and I have tried my best to adhere to that
+style.</p>
+<h2>The Technical</h2>
+<p>I considered writing all code from scratch, but as I wanted to write the actual content using
+Markdown, I looked into what modern tools were available to help me. These criteria helped me
+narrow it down:</p>
+<ul>
+<li>Raw HTML/CSS should be the end result. Only JavaScript that I write myself is allowed, no
+framework overhead.</li>
+<li>Able to write the content in Markdown, to make it easier for me to focus on the content,
+when writing content. I rarely use big fancy word processors like Word or Google Docs,
+as I tend to be distracted by all the options available. Instead I use a simple text editor.</li>
+<li>Should be hosted on GitHub Pages and be able to use GitHub Actions to generate the site.
+The reason for this is that GitHub provides both for free and I like the simplicity of
+them.</li>
+<li>Easy to work with, while still being flexible. Start small, but ability to expand.</li>
+<li>Not too old project, because I'd like to see if someone had made the wheel even rounder.</li>
+</ul>
+<p>From this I quickly ended up with <a href="https://www.11ty.dev/">Eleventy (11ty)</a> which checks off all the boxes above.
+I got the basic setup in 15 minutes and then spend a couple of hours tweaking the CSS styles
+to be brutal enough.</p>
+
+</article>
+
+    </main>
+
+    <footer>
+      <div>&copy; 2000-2021</div>
+      <a href="https://github.com/frankbille/frankbille.github.io/blob/source/./blog/2021-06-08-new-website/index.md">Edit this page on GitHub</a>
+    </footer>
+  </body>
+</html>
