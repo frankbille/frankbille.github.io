@@ -1,19 +1,15 @@
 const CleanCSS = require("clean-css");
 const moment = require("moment");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false, wpm: 200 });
 
   eleventyConfig.addLayoutAlias("main", "layouts/main.njk");
   eleventyConfig.addLayoutAlias("index", "layouts/index.njk");
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    // Optional, default is "---"
-    excerpt_separator: "<!-- excerpt -->",
-  });
 
   eleventyConfig.addFilter("debug", function (json) {
     return JSON.stringify(json, null, 4);

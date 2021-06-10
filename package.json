@@ -13,6 +13,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "clean-css": "^5.1.2",
     "moment": "^2.29.1",
     "nunjucks": "^3.2.3"
