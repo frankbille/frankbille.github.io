@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("keybase.txt");
 
   eleventyConfig.addFilter("debug", function (json) {
     return JSON.stringify(json, null, 4);
