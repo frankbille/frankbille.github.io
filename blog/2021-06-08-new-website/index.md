@@ -17,7 +17,7 @@ style.
 For some time, I have wanted to start blogging about Life in Tech. I'm passionate about topics such as
 diversity, mentoring, and developer experience. I might also do technical posts.
 
-The next post I want to do is on "Why diversity in teams is a good thing".
+The next non-tech post I want to do is on "Why diversity in teams is a good thing."
 
 For now, enjoy "Behind the Scenes" of this website:
 
@@ -28,7 +28,7 @@ Markdown, I looked into what modern tools were available to help me. These crite
 narrow it down:
 
 - Raw HTML/CSS should be the result. Only JavaScript that I write myself is allowed, with no framework overhead.
-- Able to write the content in Markdown to make it easier for me to focus on the content when writing content.
+- Ability to write the content in Markdown to make it easier for me to focus on the content.
   I rarely use big fancy word processors like Word or Google Docs, as I tend to be distracted by all the options available.
   Instead, I use a simple text editor.
 - Should be hosted on GitHub Pages and be able to use GitHub Actions to generate the site.
