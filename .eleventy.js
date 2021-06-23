@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("main", "layouts/main.njk");
   eleventyConfig.addLayoutAlias("index", "layouts/index.njk");
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("about", "layouts/about.njk");
 
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("keybase.txt");
