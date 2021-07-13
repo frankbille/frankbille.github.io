@@ -10,4 +10,11 @@ layout: main
     </div>
 
     {{ content | safe }}
+
+
+    {% if twitterLink %}
+    <div class="twitter-link">
+        <a href="{{ twitterLink }}" title="{{ twitterComment | safe }}" target="_blank">Comment on this blog post on Twitter</a>
+    </div>
+    {% endif %}
 </article>

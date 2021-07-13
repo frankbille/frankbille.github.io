@@ -4,6 +4,7 @@ title: New website made with Eleventy
 date: 2021-06-08
 tags: ["post"]
 excerpt: I have created this new website using Eleventy
+twitterLink: https://twitter.com/frankbille/status/1414993301472747524
 ---
 
 It has been a long time since I have done anything with my website, and I figured it was about time.

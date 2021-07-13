@@ -150,6 +150,12 @@ main article ol li {
   margin-top: 1em;
 }
 
+main article .twitter-link {
+  border-top: 1px solid darkgray;
+  margin-top: 4em;
+  padding-top: 2em;
+}
+
 /* Footer */
 footer {
   margin-top: auto;
