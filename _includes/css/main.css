@@ -59,22 +59,12 @@ header nav ul li a:hover {
   color: white;
 }
 
-@media (max-width: 480px) {
-  header .title a {
-    margin-right: 0;
-  }
-  header nav {
-    display: none;
-  }
-}
-
 /* Main */
 main {
   margin-top: 4em;
   display: flex;
   flex-direction: column;
   align-self: center;
-  min-width: 617px;
   max-width: 1234px;
   padding-left: 4em;
   padding-right: 4em;
@@ -182,6 +172,37 @@ footer a:hover {
   text-decoration-color: red;
   background-color: black;
   color: white;
+}
+
+@media (max-width: 480px) {
+  header {
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+  }
+  header .title a {
+    margin-right: 0;
+    height: 2em;
+  }
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    height: 2em;
+    justify-content: space-evenly;
+  }
+  header nav ul li {
+    margin-left: 0;
+  }
+  header nav ul li a {
+    margin-left: 0;
+  }
+
+  main article ul,
+  main article ol {
+    padding-inline-start: 1em;
+    padding-inline-end: 0;
+  }
 }
 
 @media print {

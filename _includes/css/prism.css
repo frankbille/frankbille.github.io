@@ -49,6 +49,34 @@ pre[class*="language-"] {
   border: 1px dashed black;
 }
 
+@media (max-width: 1280px) {
+  pre[class*="language-"] {
+    width: calc(650px + 8em);
+  }
+}
+
+@media (max-width: 1024px) {
+  pre[class*="language-"] {
+    width: calc(380px + 8em);
+  }
+}
+
+@media (max-width: 780px) {
+  pre[class*="language-"] {
+    width: 340px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  pre[class*="language-"] {
+    width: 220px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.1em 0.3em;
