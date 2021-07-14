@@ -2,7 +2,7 @@
 layout: post
 title: New website made with Eleventy
 date: 2021-06-08
-tags: ["post"]
+tags: ['post']
 excerpt: I have created this new website using Eleventy
 twitterLink: https://twitter.com/frankbille/status/1414993301472747524
 ---
@@ -48,7 +48,7 @@ The good thing about [Eleventy)][eleventy] is that it tries to do most things at
 For example, I use [Prism][prismjs] to do syntax highlighting like this:
 
 ```js
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);

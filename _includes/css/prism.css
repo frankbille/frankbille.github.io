@@ -3,8 +3,8 @@
  *
  * Based on Coldark Theme by Armand Philippot
  */
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: #111b27;
   font-size: 0.95em;
   background: none;
@@ -23,46 +23,46 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
   border: 1px dashed black;
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
   border: 1px dashed black;
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
   padding: 1em;
   margin: 3em 4em;
   overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   border: 1px dashed black;
 }
 
 @media (max-width: 1280px) {
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     width: calc(650px + 8em);
   }
 }
 
 @media (max-width: 1024px) {
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     width: calc(380px + 8em);
   }
 }
 
 @media (max-width: 780px) {
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     width: 340px;
     margin-left: 0;
     margin-right: 0;
@@ -70,7 +70,7 @@ pre[class*="language-"] {
 }
 
 @media (max-width: 480px) {
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     width: 220px;
     margin-left: 0;
     margin-right: 0;
@@ -78,7 +78,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
   padding: 0.1em 0.3em;
   border-radius: 0.3em;
   white-space: normal;
