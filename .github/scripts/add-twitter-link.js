@@ -51,6 +51,11 @@ const addTwitterLink = async () => {
   }
 };
 
-addTwitterLink().then(() => {
-  console.log('Done');
-});
+addTwitterLink()
+  .then(() => {
+    console.log('Done');
+  })
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
