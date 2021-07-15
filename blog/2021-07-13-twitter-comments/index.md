@@ -8,7 +8,6 @@ excerpt: 'Static link to Twitter for blog comments, instead of embedding'
 twitterComment: >-
   To keep in line with my No JavaScript promise, I'm using Twitter for my blog
   post comments
-twitterLink: 'https://twitter.com/frankbille/status/1415786907569586176'
 ---
 
 I have wanted to support comments on my blog posts but was unsure how to do that best, with my No JavaScript promise.
@@ -88,6 +87,9 @@ it posted to Twitter and pushed the added twitterLink back to the source branch.
 GitHub token, a new built will never be triggered. The [solution][triggersolution] is to use a personal
 access token instead.
 
+**Update 2:** To be able actually to use the personal access token, we need to stop storing credentials
+from the checkout phase, as described [here][triggersolution2].
+
 [firstblogpost]: https://www.frankbille.dk/blog/2021-06-08-new-website/
 [11ty]: https://11ty.dev
 [posttemplate]: https://github.com/frankbille/frankbille.github.io/blob/source/_includes/layouts/post.njk
@@ -98,3 +100,4 @@ access token instead.
 [actionsscript]: https://github.com/frankbille/frankbille.github.io/blob/source/.github/workflows/eleventy_build.yml
 [addcommit]: https://github.com/marketplace/actions/add-commit
 [triggersolution]: https://github.community/t/push-from-action-does-not-trigger-subsequent-action/16854
+[triggersolution2]: https://github.community/t/push-from-action-even-with-pat-does-not-trigger-action/17622/6
