@@ -14,8 +14,12 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
     "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
+    "@nodelib/fs.walk": "^1.2.8",
     "clean-css": "^5.1.2",
+    "gray-matter": "^4.0.3",
     "moment": "^2.29.1",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "prettier": "^2.3.2",
+    "twitter-api-v2": "^1.1.1"
   }
 }
