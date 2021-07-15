@@ -8,6 +8,7 @@ excerpt: 'Static link to Twitter for blog comments, instead of embedding'
 twitterComment: >-
   To keep in line with my No JavaScript promise, I'm using Twitter for my blog
   post comments
+twitterLink: 'https://twitter.com/frankbille/status/1415794571292946437'
 ---
 
 I have wanted to support comments on my blog posts but was unsure how to do that best, with my No JavaScript promise.
