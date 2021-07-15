@@ -10,12 +10,6 @@ const sleep = (timeout) => {
 };
 
 const postToTwitter = async (postUrl, twitterComment) => {
-  console.log({
-    accessToken: (process.env.TWITTER_CONSUMER_KEY || '').length,
-    accessSecret: (process.env.TWITTER_CONSUMER_SECRET || '').length,
-    appKey: (process.env.TWITTER_APP_KEY || '').length,
-    appSecret: (process.env.TWITTER_APP_SECRET || '').length,
-  });
   const twitterClient = new TwitterApi({
     accessToken: process.env.TWITTER_CONSUMER_KEY,
     accessSecret: process.env.TWITTER_CONSUMER_SECRET,
