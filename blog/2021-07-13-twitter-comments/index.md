@@ -8,7 +8,6 @@ excerpt: 'Static link to Twitter for blog comments, instead of embedding'
 twitterComment: >-
   To keep in line with my No JavaScript promise, I'm using Twitter for my blog
   post comments
-twitterLink: 'https://twitter.com/frankbille/status/1415782054990467076'
 ---
 
 I have wanted to support comments on my blog posts but was unsure how to do that best, with my No JavaScript promise.
@@ -62,24 +61,31 @@ again. Easy Peasy!
 ## Automatically post to Twitter and add the twitterLink
 
 Yeah, knowing myself, I'm not going to remember to do that. I've been around me long enough to know
-most of my strengths and weaknesses. Fortunately, I'm in tech, and I love making computers do what they are good at, and I'm bad at, like following a script precisely and consistently!
+most of my strengths and weaknesses. Fortunately, I'm in tech, and I love making computers do what
+they are good at, and I'm bad at, like following a script precisely and consistently!
 
 So with the help of [gray-matter][graymatter] (handling the meta-data in my templates),
 [Twitter API v2][twitterapiv2] (posting tweets and getting the status id back) and
 [fs.walk][fswalk] (easily find all my blog posts on the file system), I created [a small script][addtwitterlinkscript] to be run
-on all commits. It finds blog posts, that hasn't been posted to Twitter yet, posts a status update and
+on all commits. It finds blog posts that haven't been posted to Twitter yet, posts a status update and
 inserts `twitterLink` in the post file.
 
-This is being called from my [GitHub Actions script][actionsscript], which afterwards pushes the
+The script is being called from my [GitHub Actions script][actionsscript], which afterward pushes the
 changes to the blog post files back to the GitHub Repository, using the cool [Add & Commit][addcommit]
 action.
 
-It even supports custom Twitter status text, if I set the `twitterComment` property in the post file.
-In the unlikely event I forget to set `twitterComment`, it will fallback to the `excerpt` property
+It even supports custom Twitter status text if I set the `twitterComment` property in the post file.
+In the unlikely event, I forget to set `twitterComment` it will fall back to the `excerpt` property
 and finally the `title` property.
 
-Only thing left to say is: I hope the script works and if it does there should be a Twitter link below
+The only thing left to say is: I hope the script works, and if it does, there should be a Twitter link below
 👇👇👇🤞🤞🤞
+
+**Update 1:** It almost worked, and then not really. I had added the secret Twitter keys wrongly to GitHub
+(Secrets need to be added as repository secrets to be accessible in the Action scripts). After fixing that,
+it posted to Twitter and pushed the added twitterLink back to the source branch. But when using the default
+GitHub token, a new built will never be triggered. The [solution][triggersolution] is to use a personal
+access token instead.
 
 [firstblogpost]: https://www.frankbille.dk/blog/2021-06-08-new-website/
 [11ty]: https://11ty.dev
@@ -90,3 +96,4 @@ Only thing left to say is: I hope the script works and if it does there should b
 [addtwitterlinkscript]: https://github.com/frankbille/frankbille.github.io/blob/source/.github/scripts/add-twitter-link.js
 [actionsscript]: https://github.com/frankbille/frankbille.github.io/blob/source/.github/workflows/eleventy_build.yml
 [addcommit]: https://github.com/marketplace/actions/add-commit
+[triggersolution]: https://github.community/t/push-from-action-does-not-trigger-subsequent-action/16854
