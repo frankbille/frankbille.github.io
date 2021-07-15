@@ -36,6 +36,11 @@ jobs:
       - name: Process blog posts and post to Twitter
         run: |
           node .github/scripts/add-twitter-link.js
+        env:
+          TWITTER_APP_KEY: ${{ secrets.TWITTER_APP_KEY }}
+          TWITTER_APP_SECRET: ${{ secrets.TWITTER_APP_SECRET }}
+          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
 
       - name: Commit changes and push again
         uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
