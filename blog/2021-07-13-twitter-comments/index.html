@@ -77,6 +77,8 @@ and finally the <code>title</code> property.</p>
 it posted to Twitter and pushed the added twitterLink back to the source branch. But when using the default
 GitHub token, a new built will never be triggered. The <a href="https://github.community/t/push-from-action-does-not-trigger-subsequent-action/16854">solution</a> is to use a personal
 access token instead.</p>
+<p><strong>Update 2:</strong> To be able actually to use the personal access token, we need to stop storing credentials
+from the checkout phase, as described <a href="https://github.community/t/push-from-action-even-with-pat-does-not-trigger-action/17622/6">here</a>.</p>
 
 
 
