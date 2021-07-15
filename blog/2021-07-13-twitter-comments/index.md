@@ -87,9 +87,6 @@ it posted to Twitter and pushed the added twitterLink back to the source branch.
 GitHub token, a new built will never be triggered. The [solution][triggersolution] is to use a personal
 access token instead.
 
-**Update 2:** To be able actually to use the personal access token, we need to stop storing credentials
-from the checkout phase, as described [here][triggersolution2].
-
 [firstblogpost]: https://www.frankbille.dk/blog/2021-06-08-new-website/
 [11ty]: https://11ty.dev
 [posttemplate]: https://github.com/frankbille/frankbille.github.io/blob/source/_includes/layouts/post.njk
