@@ -57,20 +57,26 @@ post. One single step, easy to remember. 👋</p>
 again. Easy Peasy!</p>
 <h2>Automatically post to Twitter and add the twitterLink</h2>
 <p>Yeah, knowing myself, I'm not going to remember to do that. I've been around me long enough to know
-most of my strengths and weaknesses. Fortunately, I'm in tech, and I love making computers do what they are good at, and I'm bad at, like following a script precisely and consistently!</p>
+most of my strengths and weaknesses. Fortunately, I'm in tech, and I love making computers do what
+they are good at, and I'm bad at, like following a script precisely and consistently!</p>
 <p>So with the help of <a href="https://github.com/jonschlinkert/gray-matter">gray-matter</a> (handling the meta-data in my templates),
 <a href="https://github.com/PLhery/node-twitter-api-v2">Twitter API v2</a> (posting tweets and getting the status id back) and
 <a href="https://www.npmjs.com/package/@nodelib/fs.walk">fs.walk</a> (easily find all my blog posts on the file system), I created <a href="https://github.com/frankbille/frankbille.github.io/blob/source/.github/scripts/add-twitter-link.js">a small script</a> to be run
-on all commits. It finds blog posts, that hasn't been posted to Twitter yet, posts a status update and
+on all commits. It finds blog posts that haven't been posted to Twitter yet, posts a status update and
 inserts <code>twitterLink</code> in the post file.</p>
-<p>This is being called from my <a href="https://github.com/frankbille/frankbille.github.io/blob/source/.github/workflows/eleventy_build.yml">GitHub Actions script</a>, which afterwards pushes the
+<p>The script is being called from my <a href="https://github.com/frankbille/frankbille.github.io/blob/source/.github/workflows/eleventy_build.yml">GitHub Actions script</a>, which afterward pushes the
 changes to the blog post files back to the GitHub Repository, using the cool <a href="https://github.com/marketplace/actions/add-commit">Add &amp; Commit</a>
 action.</p>
-<p>It even supports custom Twitter status text, if I set the <code>twitterComment</code> property in the post file.
-In the unlikely event I forget to set <code>twitterComment</code>, it will fallback to the <code>excerpt</code> property
+<p>It even supports custom Twitter status text if I set the <code>twitterComment</code> property in the post file.
+In the unlikely event, I forget to set <code>twitterComment</code> it will fall back to the <code>excerpt</code> property
 and finally the <code>title</code> property.</p>
-<p>Only thing left to say is: I hope the script works and if it does there should be a Twitter link below
+<p>The only thing left to say is: I hope the script works, and if it does, there should be a Twitter link below
 👇👇👇🤞🤞🤞</p>
+<p><strong>Update 1:</strong> It almost worked, and then not really. I had added the secret Twitter keys wrongly to GitHub
+(Secrets need to be added as repository secrets to be accessible in the Action scripts). After fixing that,
+it posted to Twitter and pushed the added twitterLink back to the source branch. But when using the default
+GitHub token, a new built will never be triggered. The <a href="https://github.community/t/push-from-action-does-not-trigger-subsequent-action/16854">solution</a> is to use a personal
+access token instead.</p>
 
 
 
