@@ -38,8 +38,8 @@ const addTwitterLink = async () => {
       const postPath = blogPostToTweet.path.replace('/index.md', '/');
       const postUrl = `https://www.frankbille.dk/${postPath}`;
       const tweetText =
-        blogPostToTweet.data.twitterComment |
-        blogPostToTweet.data.excerpt |
+        blogPostToTweet.data.twitterComment ||
+        blogPostToTweet.data.excerpt ||
         blogPostToTweet.data.title;
       const tweetUrl = await postToTwitter(postUrl, tweetText);
       blogPostToTweet.data.twitterLink = tweetUrl;
