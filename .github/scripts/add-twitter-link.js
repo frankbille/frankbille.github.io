@@ -28,8 +28,6 @@ const addTwitterLink = async () => {
   const blogPostsToTweet = markdownFiles
     .map((markdownFile) => matter.read(markdownFile.path))
     .filter((fileData) => {
-      const fileData = matter.read(markdownFile.path);
-
       return !fileData.data.twitterLink;
     });
   if (blogPostsToTweet.length > 0) {
