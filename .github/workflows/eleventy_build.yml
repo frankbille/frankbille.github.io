@@ -49,6 +49,9 @@ jobs:
         with:
           add: 'blog'
           message: 'Added Twitter comment links'
+          default_author: user_info
+          author_name: Frank Bille-Stauner
+          author_email: frank@frankbille.dk
           push: true
         env:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
