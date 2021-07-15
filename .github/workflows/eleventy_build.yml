@@ -47,5 +47,5 @@ jobs:
         with:
           add: 'blog'
           default_author: github_actions
-          message: 'Your commit message'
-          push: false
+          message: 'Added Twitter comment links'
+          push: true
